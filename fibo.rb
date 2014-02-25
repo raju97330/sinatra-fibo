@@ -8,10 +8,6 @@ class Fibo < Sinatra::Base
     return "fib(#{num}) => #{x} | #{t2 - t1} secs\n"
   end
 
-get '/reverse/:string' do
-  params[:string].reverse
-end
-  
   def fibo(num)
     # Deliberately slow.
     if num <= 0
