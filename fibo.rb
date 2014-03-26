@@ -4,7 +4,7 @@ class Fibo < Sinatra::Base
     t1 = Time.now
     x =  fibo(num)
     t2 = Time.now
-    $stderr.puts("fibo(#{num}) => #{x}")
+#    $stderr.puts("fibo(#{num}) => #{x}")
     return "fib(#{num}) => #{x} | #{t2 - t1} secs\n"
   end
 
