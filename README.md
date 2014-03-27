@@ -18,7 +18,7 @@ This is a simple Sinatra Ruby application copied from Cloud Foundry's README.
 To test autoscaling:
 
 1. Set the autoscaling parameters.  I find something like
-CPU 7-15 % and 2-5 instances works.
+CPU 20-40% and 2-5 instances works.
 
 2. Run the command:
 
