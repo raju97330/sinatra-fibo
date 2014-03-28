@@ -1,11 +1,24 @@
 class Fibo < Sinatra::Base
   get '/fib/:num' do
+    fiboWrapper
+  end
+  
+  get '/fibo/:num' do
+    fiboWrapper
+  end
+  
+  def fiboWrapper
     num = params[:num].to_i
     t1 = Time.now
     x =  fibo(num)
     t2 = Time.now
-#    $stderr.puts("fibo(#{num}) => #{x}")
     return "fib(#{num}) => #{x} | #{t2 - t1} secs\n"
+  end
+  
+  get '/' do
+    url = request.url
+    url.chop! if url[-1] == '/'
+    return "Usage: #{url}/fib/[NUMBER]"
   end
 
   def fibo(num)
