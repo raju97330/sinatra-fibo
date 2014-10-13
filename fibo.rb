@@ -18,7 +18,7 @@ class Fibo < Sinatra::Base
   get '/' do
     url = request.url
     url.chop! if url[-1] == '/'
-    return "Usage: #{url}/fib/[NUMBER]"
+    return "Rajeev's Fibonacci - Usage: #{url}/fib/[NUMBER]"
   end
 
   def fibo(num)
