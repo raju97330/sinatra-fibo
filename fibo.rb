@@ -12,13 +12,13 @@ class Fibo < Sinatra::Base
     t1 = Time.now
     x =  fibo(num)
     t2 = Time.now
-    return "Rajeev's Fibonacci - fib(#{num}) => #{x} | #{t2 - t1} secs\n"
+    return "Fibonacci - fib(#{num}) => #{x} | #{t2 - t1} secs\n"
   end
   
   get '/' do
     url = request.url
     url.chop! if url[-1] == '/'
-    return "Rajeev's Fibonacci - Usage: #{url}/fib/[NUMBER]"
+    return "Fibonacci - Usage: #{url}/fib/[NUMBER]"
   end
 
   def fibo(num)
