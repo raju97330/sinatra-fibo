@@ -12,7 +12,7 @@ class Fibo < Sinatra::Base
     t1 = Time.now
     x =  fibo(num)
     t2 = Time.now
-    return "fib(#{num}) => #{x} | #{t2 - t1} secs\n"
+    return "Rajeev's Fibonacci - fib(#{num}) => #{x} | #{t2 - t1} secs\n"
   end
   
   get '/' do
